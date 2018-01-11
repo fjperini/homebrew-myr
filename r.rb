@@ -79,6 +79,7 @@ class R < Formula
     system "make"
     if build.with? "cairo"
       system "make", "cairodevices"
+    end
     ENV.deparallelize do
       system "make", "install"
     end
